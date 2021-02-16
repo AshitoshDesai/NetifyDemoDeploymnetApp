@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="container-fluid">
+    <h3 style="margin: 20px 0 20px 0;">{{productService.langSelected == 'english'?'Content':'सामग्री'}}</h3>
+    <div class="row">
+       <!--  <ng-container *ngFor="let prod of productService.products; let i = index"> -->
+          
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4" *ngFor="let prod of productService.products; let i = index">
+              <div class="prod-style card">
+                <div><img class="prod-img" src='../../../assets/mb-sample.jpg'/></div>
+                
+              <!-- <img class="prod-img" src='../../../assets/mb-sample.jpg'/> -->
+              
+              <div class="prod-style">
+              <p *ngIf="productService.langSelected == 'english'">
+                <span>{{prod.name}}</span>
+                <span> / €{{prod.price}}</span>
+              </p>
+              <p *ngIf="productService.langSelected == 'marathi'">
+                <span>{{prod.nameMr}}</span>
+                <span> / €{{prod.price}}</span>
+              </p>
+              <button type="button" class="btn btn-dark w-100 btn-border-radious" (click)="addToCart(prod)">{{productService.langSelected == 'english'?'Add to cart':'कार्टमध्ये जोडा'}}</button>
+              </div>
+              </div>
+            </div>
+        <!-- </ng-container> -->
+      </div>
+      </div>
+</div>

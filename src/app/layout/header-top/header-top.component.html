@@ -1,0 +1,17 @@
+
+  <nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+       <span style="font-size: 24px;"><b>Logo</b>oo</span>
+      </li>
+      </ul>
+        <div class=" ml-auto mr-auto" style="display: flex;">
+          <form class="form-inline" action="/action_page.php">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-dark btn-border-radious" type="submit">{{prodservice.langSelected == 'english'?'Search':'शोध'}}</button>
+          </form>
+        </div>
+        <div class="ml-auto">
+          <span>{{prodservice.cartItemCount}} {{prodservice.langSelected == 'english'? 'items':'आयटम'}} / €{{prodservice.cartItemPrice}}</span>
+        </div>
+  </nav>

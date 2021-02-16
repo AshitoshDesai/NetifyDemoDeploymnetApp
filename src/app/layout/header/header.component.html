@@ -1,0 +1,20 @@
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav" *ngFor="let nav of navArry">
+    <li class="nav-item">
+      <a class="nav-link" [href]="nav.path" *ngIf="prodservice.langSelected == 'english'">{{nav.text}}
+        <span class="badge badge-light header-badge"  *ngIf="nav.count !=''">{{nav.count}}</span>
+      </a>
+      <a class="nav-link" [href]="nav.path"  *ngIf="prodservice.langSelected == 'marathi'">{{nav.textMr}}
+        <span class="badge badge-light header-badge"  *ngIf="nav.count !=''">{{nav.count}}</span>
+      </a>
+    </li>
+  </ul>
+  <div class="drop-down-left">
+  <select class="form-select" [(ngModel)]="prodservice.langSelected"><!-- [(ngModel)]="langSelected" [(ngModel)]="prodservice.langSelected"-->
+    <option [value]="'english'">English</option>
+    <option [value]="'marathi'">Marathi</option>
+  </select>
+  </div>
+  <div class="bg-white-color ml-auto"><div class="f-div"><i class="fa fa-facebook"></i></div></div>
+</nav>

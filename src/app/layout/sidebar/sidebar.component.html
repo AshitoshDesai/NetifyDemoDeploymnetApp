@@ -1,0 +1,15 @@
+
+<div class="navbar-header">
+  {{prodservice.langSelected == 'english'?'Navigation' :'नेव्हिगेशन'}} 
+</div>
+<nav class="navbar bg-light">
+  <ul class="navbar-nav" style="width: 100%; margin-left: 50px;" *ngFor="let nav of navArry">
+    <li class="nav-item">
+      <a class="nav-link nav-color" [href]="nav.path" *ngIf="prodservice.langSelected == 'english'">{{nav.text}}
+        <span style="border-radius: 50px; float: right;" class="badge badge-dark"  *ngIf="nav.count !=''">{{nav.count}}</span></a>
+      <a class="nav-link nav-color" [href]="nav.path"  *ngIf="prodservice.langSelected == 'marathi'">{{nav.textMr}}
+        <span style="border-radius: 50px; float: right;"  class="badge badge-dark" *ngIf="nav.count !=''">{{nav.count}}</span></a>
+      
+    </li> 
+  </ul>
+</nav>
